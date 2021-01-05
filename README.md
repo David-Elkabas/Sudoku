@@ -1,5 +1,6 @@
-# Sudoku python pygame backtracking
-in one sentence: Sudoku generator and solver with nice GUI created in Python.
+# Sudoku
+
+in one sentence: Sudoku generator and solver with nice GUI created in Python using pygame.
 
 in some more sentences, the player choose a level difficulty (easy, normal or hard) after it the one script generate a random sudoku map accourding the level difficulty (and another script solve the sudoku for comparison with the player input after)
 the player can play the sudoku with a simple GUI.<br /><br />
