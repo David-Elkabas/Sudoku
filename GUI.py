@@ -1,5 +1,4 @@
 import pygame
-# from sudokuGenerator import *
 from sudokuSolverAlgo import *
 from chooseLevel import *
 import time
@@ -23,8 +22,6 @@ MARGIN = 5
 numbers_1to9 = [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4, pygame.K_5, pygame.K_6, pygame.K_7, pygame.K_8,
                 pygame.K_9]
 
-# pygame.init()
-
 # Set the width and height of the screen [width, height]
 size = (500, 500)
 # screen = pygame.display.set_mode(size)
@@ -35,11 +32,6 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 
 # Loop until the user clicks the close button.
 done = False
-
-
-
-# Used to manage how fast the screen updates
-# clock = pygame.time.Clock()
 
 
 def cheatingAllTheWay():
@@ -176,12 +168,10 @@ if __name__ == "__main__":
                 pos = pygame.mouse.get_pos()
                 column = pos[0] // (WIDTH + MARGIN)
                 row = pos[1] // (WIDTH + MARGIN)
-                #  print("Click ", pos, "Grid coordinates: ", row, column)
                 # ------ checking if it is a empty (0 inside) ------
                 if Board[row][column] == 0:
                     # ------ coloring the border of the clicked cell ----- #TODO YELLOW
-                    # if readyForInput is True:
-                    #     print("g")
+                   
                     addNewRect(row, column, YELLOW, 5)
                     readyForInput = True
                     # ------ now only wait for input from the user -----
@@ -204,8 +194,6 @@ if __name__ == "__main__":
         pygame.display.flip()
         pygame.display.update()
 
-        # --- Limit to 60 frames per second
-        # clock.tick(60)
 
 # Close the window and quit.
 pygame.quit()

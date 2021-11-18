@@ -15,13 +15,7 @@ Y = 200
 size = (X, Y)
 window = pygame.display.set_mode(size)
 font = pygame.font.Font('freesansbold.ttf', 25)
-# text = font.render('choose difficulty level', True, BLACK, WHITE)
-# textRect = text.get_rect()
-# textRect.center = (X // 2, Y // 2 - 40)
-#
-# pygame.display.set_caption("Sudoku King")
-#
-# done = True
+
 
 
 def drawButton(left, top, color, textInButton):

@@ -82,7 +82,6 @@ def deleteCells(firstBoard,number):
     while number:
         row = random.randint(0, 8)
         col = random.randint(0, 8)
-        # print(row,col,firstBoard[row][col])
         if firstBoard[row][col] != 0:
             firstBoard[row][col] = 0
             number = number - 1
@@ -99,9 +98,3 @@ def sudokuGenerate(firstBoard, level):
         deleteCells(firstBoard,40)
     if level == 3:
         deleteCells(firstBoard,50)
-    #
-    #     print("--- - - - - - - - - - ---")
-    # printBoard(firstBoard)
-
-
-# sudokuGenerate()
