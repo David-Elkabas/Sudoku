@@ -16,10 +16,10 @@ The player can then play sudoku with a simple GUI:<br /><br />
 </p>
 
 the program contains 4 scrips .<br /> 
-1) sudokuGenerator - script that generates a 9X9 sudoku board according to the sudoku puzzle rules - using the backtracking algorithm<br />
-2) sudokuSolverAlgo - script that solves the sudoku puzzle - using the backtracking algorithm<br />
-3) chooseLevel - simple script for the level difficulty GUI<br />
-4) GUI - the main script, the player runs this script to play the game<br />
+1️⃣ sudokuGenerator - script that generates a 9X9 sudoku board according to the sudoku puzzle rules - using the backtracking algorithm<br />
+2️⃣ sudokuSolverAlgo - script that solves the sudoku puzzle - using the backtracking algorithm<br />
+3️⃣ chooseLevel - simple script for the level difficulty GUI<br />
+4️⃣ GUI - the main script, the player runs this script to play the game<br />
 
 <p align="center">
 	<img src="https://github.com/David-Elkabas/Sudoku/blob/master/gifs/start%20the%20game.gif">
