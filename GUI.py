@@ -42,7 +42,7 @@ def cheatingAllTheWay(sol):
             addNumToBoard(Board[row][column], row, column, L_GREEN)
             time.sleep(0.05)
             pygame.display.flip()
-    finish()
+    finish(sol)
 
 
 def addNumToBoard(number, row, column, color):
@@ -56,7 +56,7 @@ def addNumToBoard(number, row, column, color):
     drawTheBorder()
 
 
-def finish():
+def finish(sol):
      
     if sol == Board: #Check if the state of the board is same as the solution.
         print("good")
@@ -157,7 +157,7 @@ if __name__ == "__main__":
                 if event.key in numbers_1to9:
                     key = chr(event.key)
                 if event.key == pygame.K_RETURN:
-                    finish()
+                    finish(sol)
                 if event.key == pygame.K_c: #Press 'c' to auto solve the whole board. 
                     cheatingAllTheWay(sol)
             if event.type == pygame.MOUSEBUTTONDOWN:
