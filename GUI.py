@@ -34,14 +34,15 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 done = False
 
 
-def cheatingAllTheWay():
+def cheatingAllTheWay(sol): 
     for row in range(len(Board)):
         for column in range(len(Board[row])):
-            Board[row][column] = solvedBoard[row][column]
+          if Board[row][column] == 0: #Update unsolved locations
+            Board[row][column] = sol[row][column] #Use the solution to update board
             addNumToBoard(Board[row][column], row, column, L_GREEN)
             time.sleep(0.05)
             pygame.display.flip()
-    finish()
+    finish(sol)
 
 
 def addNumToBoard(number, row, column, color):
@@ -55,8 +56,9 @@ def addNumToBoard(number, row, column, color):
     drawTheBorder()
 
 
-def finish():
-    if solvedBoard == Board:
+def finish(sol):
+     
+    if sol == Board: #Check if the state of the board is same as the solution.
         print("good")
     else:
         print("not good")
@@ -155,9 +157,9 @@ if __name__ == "__main__":
                 if event.key in numbers_1to9:
                     key = chr(event.key)
                 if event.key == pygame.K_RETURN:
-                    finish()
-                if event.key == pygame.K_c:
-                    cheatingAllTheWay()
+                    finish(sol)
+                if event.key == pygame.K_c: #Press 'c' to auto solve the whole board. 
+                    cheatingAllTheWay(sol)
             if event.type == pygame.MOUSEBUTTONDOWN:
                 # ------ if clicked on a cell get his row and column ------
                 if readyForInput is True:
